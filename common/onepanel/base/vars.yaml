@@ -47,11 +47,11 @@ application:
   domain:
     required: true
     default: <domain>
-  # The Fully Qualified Domain (FQDN) where Onepanel will be hosted.
-  # If `domain` above is set to example.com or sub.example.com, then your FQDN could be: app.example.com or app.sub.example.com respectively
-  fqdn:
+  # The sub-domain where Onepanel will be accessed from.
+  # Restrictions: Cannot start with a number (0-9), limited to 63 characters at max.
+  name:
     required: true
-    default: <fully-qualified-domain-name>
+    default: <name>
   # The kubernetes cluster where Onepanel will be deployed.
   # Valid values: minikube, microk8s, aks, eks, gke
   provider:

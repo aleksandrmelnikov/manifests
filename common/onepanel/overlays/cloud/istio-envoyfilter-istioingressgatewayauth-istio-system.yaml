@@ -45,7 +45,7 @@ spec:
                     ["grpc-metadata-x-original-uri"] = request_handle:headers():get(":path")
                   }
 
-                  if "$(applicationFqdn)" == headers["grpc-metadata-x-original-authority"] then
+                  if "$(applicationName)" == headers["grpc-metadata-x-original-authority"] then
                     return
                   end
 
